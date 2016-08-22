@@ -106,13 +106,6 @@ $('#goalTable').on('click','.test', function() {
 
 
 $(document).ready(function () {
-    $('#datepicker').datepicker({
-        format: "dd/mm/yyyy",
-        autoclose: true
-    });
-
-
-
 
     //load the json data from data.json file
     loadData();
