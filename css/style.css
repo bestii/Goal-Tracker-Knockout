@@ -1,0 +1,16 @@
+.highlight {
+  background-color: #ebebeb;
+}
+
+.table{
+  margin-top: 30px;
+}
+
+.form-control{
+  margin-top: 10px;
+}
+
+.btn-primary,.btn-danger{
+  margin-top: 10px;
+  margin-left: 5px;
+}
