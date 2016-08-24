@@ -38,18 +38,22 @@ $( document ).ready(function() {
         }
 
         self.deleteGoal=function(){
-
-          for(var i=0;i<self.data().length;i++){
-          if(self.data()[i].isSelected==true){
-            //self.data().splice(i,1);
-            self.data.remove(self.data()[i]);
-            i--;
+          var counter=0;
+          if(self.data().length>0){
+            for(var i=0;i<self.data().length;i++){
+                if(self.data()[i].isSelected==true){
+                  //self.data().splice(i,1);
+                  self.data.remove(self.data()[i]);
+                  i--;
+                  counter++;
+                }
+            }
+            if(counter==0){
+              alert("Please select a goal to DELETE !!!!");
+            }
+          }else{
+             alert("No goal to DELETE !!!!");
           }
-
-          }
-
-          // console.log(self.data().splice(0,1));
-          console.log(self.data());
         }
     };
 
