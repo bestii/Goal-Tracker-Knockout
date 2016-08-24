@@ -7,17 +7,6 @@
       <link rel="shortcut icon" href="gt.ico" />
       <link rel="stylesheet" href="css/bootstrap.css">
       <link rel="stylesheet" href="css/style.css">
-
-      <!-- Template for jquery Template Loader -->
-      <script type="text/html" id="rowID">
-        <tr>
-          <td><input type="checkbox" class="test" name="select" value=""></td>
-          <td data-content="name"></td>
-          <td data-content="type"></td>
-          <td data-content="deadline"></td>
-        </tr>
-      </script>
-
 </head>
       <body>
             <header class="container">
@@ -68,7 +57,7 @@
                         </thead>
                         <tbody id="placeholderID" data-bind="foreach: data">
                                <tr>
-                                    <td><input class="test" type="checkbox" name="select" value="" ></td>
+                                    <td><input class="test" type="checkbox" name="select" data-bind="checked: isSelected" ></td>
                                     <td data-bind="text:name"></td>
                                     <td data-bind="text:type"></td>
                                     <td data-bind="text:deadline"></td>
@@ -82,7 +71,6 @@
             <script src="js/jquery-3.1.0.min.js"></script>
             <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
             <!-- jquery loadTemplate framework for loading templating -->
-            <script src="js/jquery.loadTemplate.js" charset="utf-8"></script>
             <script src="js/script.js" charset="utf-8"></script>
 
       </body>
