@@ -1,4 +1,4 @@
-// To highlight the row when checkbox is clicked
+//To highlight the row when checkbox is clicked
 $('#goalTable').on('click','.test', function() {
   $(this).parent().parent().toggleClass("highlight")
 });
@@ -19,7 +19,9 @@ $( document ).ready(function() {
         self.deadline = ko.observable();
         self.isSelected = ko.observable(false);
 
-        //self.selectedItems = ko.observableArray();
+        // self.selectThing = function(item, event) {
+        //      $(event.target).parent().parent().toggleClass('highlight');
+        // };
 
         self.addGoal=function(){
           console.log(self.deadline());

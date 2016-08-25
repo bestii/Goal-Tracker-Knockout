@@ -22,7 +22,7 @@
               <div class="row">
                   <form>
                           <div class="col-md-3">
-                            <input type="text" id="nameData" class="form-control" name="name" placeholder="Goal Name" data-bind="value: name">
+                            <input type="text" id="nameData" class="form-control" name="name" placeholder="Goal Name" data-bind="value: name" required>
                           </div>
 
                           <div class="col-md-3">
@@ -38,11 +38,12 @@
                           <div class="col-md-3">
                              <input  type="date" class="form-control text-uppercase" id="datepicker" data-bind="value: deadline">
                           </div>
-                   </form>
+
                   <div class="col-md-3">
-                      <button class="btn btn-primary" id="submitBtn" type="button" name="button" data-bind="click: addGoal">Add Goal</button>
+                      <button class="btn btn-primary" id="submitBtn" type="submit" name="button" data-bind="click: addGoal">Add Goal</button>
                       <button class="btn btn-danger" type="button"  name="button" data-bind="click: deleteGoal">Delete</button>
                   </div>
+                </form>
              </div>
               <div class="row">
                 <div class="col-md-12">
@@ -57,7 +58,7 @@
                         </thead>
                         <tbody id="placeholderID" data-bind="foreach: data">
                                <tr>
-                                    <td><input class="test" type="checkbox" name="select" data-bind="checked: isSelected" ></td>
+                                    <td><input class="test" type="checkbox" name="select" data-bind="checked: isSelected"></td>
                                     <td data-bind="text:name"></td>
                                     <td data-bind="text:type"></td>
                                     <td data-bind="text:deadline"></td>
@@ -70,7 +71,6 @@
 
             <script src="js/jquery-3.1.0.min.js"></script>
             <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
-            <!-- jquery loadTemplate framework for loading templating -->
             <script src="js/script.js" charset="utf-8"></script>
 
       </body>
